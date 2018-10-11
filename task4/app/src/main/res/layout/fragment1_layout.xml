@@ -22,23 +22,12 @@
         android:id="@+id/swap_first_to_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Put Second"
+        android:text="Swap"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/swap_second_to_first"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/color_button"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498" />
-
-    <Button
-        android:id="@+id/swap_second_to_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Put Third"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/swap_first_to_second"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
