@@ -129,11 +129,19 @@
     <CalendarView
         android:id="@+id/calendarView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="3"/>
 
     <CalendarView
         android:id="@+id/calendarView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="4"/>
+
+    <CalendarView
+        android:id="@+id/calendarView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="5" />
 
 </LinearLayout>
