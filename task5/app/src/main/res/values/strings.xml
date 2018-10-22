@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Task5</string>
+    <string name="logo">LOGO</string>
+    <string name="buttonText">Details</string>
+    <string name="textview">Some text</string>
+    <string name="img1">img1</string>
+    <string name="img2">img2</string>
+    <string name="img3">img3</string>
+    <string name="showTimeText">7 Colors of the Rainbow: RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET. \nYou can open calculator with: FrameLayout, LinearLayout, RelativeLayout.</string>
+</resources>
