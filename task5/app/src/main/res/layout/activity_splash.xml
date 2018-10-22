@@ -12,12 +12,12 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="30dp"
+        android:contentDescription="@string/logo"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sektum_full"
-        android:contentDescription="@string/logo" />
+        app:srcCompat="@drawable/sektum_full" />
 
     <ProgressBar
         android:layout_width="100dp"

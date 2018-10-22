@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         final AsyncLayoutInflater asyncLayoutInflater = new AsyncLayoutInflater(this);
 
         //work with textView
-
         TextView textView = new TextView(this);
         textView.setText(makeSpannableString());
         textView.setTextSize(20f);
@@ -90,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
             }
-            for(int k = 0; k < layouts.length; k++){
-                if(textArray[i].equals(layouts[k])){
+            for (int k = 0; k < layouts.length; k++) {
+                if (textArray[i].equals(layouts[k])) {
                     layout = layouts[k].substring(0, layouts[k].length() - 1);
                     Log.d("col", layout);
                     final String finalLayout = layout;
