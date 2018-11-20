@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/actionEditItem"
+        android:icon="@drawable/ic_edit"
+        android:orderInCategory="1"
+        android:title="@string/menu_item_edit" />
+    <item
+        android:id="@+id/actionConstraintItem"
+        android:icon="@drawable/ic_constraint"
+        android:orderInCategory="2"
+        android:title="@string/menu_item_googleTV" />
+    <item
+        android:id="@+id/actionThirdItem"
+        android:icon="@drawable/ic_ipsum"
+        android:orderInCategory="3"
+        android:title="@string/menu_item_third" />
+    <item
+        android:id="@+id/actionFourthItem"
+        android:icon="@mipmap/ic_message_text"
+        android:orderInCategory="4"
+        android:title="@string/menu_item_fourth" />
+    <item
+        android:id="@+id/actionFifthItem"
+        android:icon="@mipmap/ic_message_text"
+        android:orderInCategory="5"
+        android:title="@string/menu_item_fifth" />
+
+
+</menu>

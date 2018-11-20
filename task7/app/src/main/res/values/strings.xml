@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Task7 Beta</string>
+    <string name="search_title">Search</string>
+
+    <string name="menu_item_edit">EditText</string>
+    <string name="menu_item_googleTV">GoogleTV</string>
+    <string name="menu_item_third">ThirdTab</string>
+    <string name="menu_item_fourth">FourthTab</string>
+    <string name="menu_item_fifth">FifthTab</string>
+
+    <string name="view_navigation_open">Open</string>
+    <string name="view_navigation_close">Close</string>
+
+    <string name="tab_item_edit">Greetings</string>
+    <string name="tab_item_googleTV">GoogleTV</string>
+    <string name="tab_item_titleIpsum">Another fragment</string>
+    <string name="pack_my_box_with_five_dozen_liquor_jugs">Pack my box with five dozen liquor jugs</string>
+    <string name="more">More</string>
+    <string name="rent">rent</string>
+    <string name="buy">buy</string>
+    <string name="textview123456789">TextView123456789</string>
+    <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Sem viverra aliquet eget sit. Ultricies lacus sed turpis tincidunt id aliquet. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Nulla facilisi morbi tempus iaculis. Augue mauris augue neque gravida. Erat nam at lectus urna duis convallis convallis. Cursus mattis molestie a iaculis. Egestas congue quisque egestas diam in arcu. Sed tempus urna et pharetra pharetra massa massa ultricies mi. Pellentesque elit eget gravida cum sociis natoque penatibus. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Nunc sed id semper risus in hendrerit. Molestie a iaculis at erat. Urna duis convallis convallis tellus id interdum velit. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Non blandit massa enim nec dui. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Et ultrices neque ornare aenean euismod elementum nisi. Adipiscing elit duis tristique sollicitudin nibh. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Aenean sed adipiscing diam donec. Pellentesque sit amet porttitor eget dolor morbi. Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Ut pharetra sit amet aliquam id diam maecenas.</string>
+
+</resources>
