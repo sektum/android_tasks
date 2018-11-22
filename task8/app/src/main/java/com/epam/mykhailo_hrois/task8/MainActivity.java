@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "JobService";
     private static final int JOB_ID = 666;
     private static final String MY_PREFS_NAME = "JsonData";
     TextView textView;

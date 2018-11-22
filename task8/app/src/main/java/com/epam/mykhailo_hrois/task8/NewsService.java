@@ -12,11 +12,10 @@ import android.util.Log;
 
 
 public class NewsService extends JobService {
-    private static final String TAG = "ExampleJobService";
+    private static final String TAG = "JobService";
     private static final String MY_PREFS_NAME = "JsonData";
-    private boolean jobCancelled;
     public static String data;
-
+    private boolean jobCancelled;
 
     @Override
     public boolean onStartJob(JobParameters params) {
@@ -26,16 +25,16 @@ public class NewsService extends JobService {
     }
 
     private void doBackgroundWork(final JobParameters params) {
-        AsyncTaskNews process = new AsyncTaskNews(this, params);
+        AsyncTaskNews process = new AsyncTaskNews();
         process.execute();
-        if(jobCancelled){
+        if (jobCancelled) {
             return;
         }
-        Log.d(TAG, "doBackgroundWork: " + process.data);
         showNotification(this, "Hello there", data);
         SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
         editor.putString("json", data);
         editor.apply();
+        jobFinished(params, false);
     }
 
     @Override
