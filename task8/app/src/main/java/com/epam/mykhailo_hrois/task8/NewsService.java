@@ -10,6 +10,9 @@ import android.content.SharedPreferences;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 
 public class NewsService extends JobService {
     private static final String TAG = "JobService";
@@ -20,6 +23,11 @@ public class NewsService extends JobService {
     @Override
     public boolean onStartJob(JobParameters params) {
         Log.d(TAG, "Job started");
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        String restoredText = prefs.getString("json", null);
+        if (restoredText != null) {
+            data = prefs.getString("json", "No name defined");
+        }
         doBackgroundWork(params);
         return true;
     }
@@ -30,11 +38,29 @@ public class NewsService extends JobService {
         if (jobCancelled) {
             return;
         }
-        showNotification(this, "Hello there", data);
-        SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
-        editor.putString("json", data);
-        editor.apply();
+
+        showNotification(this, getDate(), data);
+        if(data != null) {
+            SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+            editor.putString("json", data);
+            editor.apply();
+        }
         jobFinished(params, false);
+    }
+
+    private String getDate() {
+        StringBuilder stringBuilder = new StringBuilder();
+        Calendar calendar = Calendar.getInstance();
+        stringBuilder.append(calendar.get(Calendar.DAY_OF_MONTH));
+        stringBuilder.append(" ");
+        stringBuilder.append(calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, new Locale("en")));
+        stringBuilder.append(" ");
+        stringBuilder.append(calendar.get(Calendar.HOUR_OF_DAY));
+        stringBuilder.append(":");
+        stringBuilder.append(calendar.get(Calendar.MINUTE));//TODO how to show minutes which less then 10 like "0$"
+        stringBuilder.append(":");
+        stringBuilder.append(calendar.get(Calendar.SECOND));
+        return stringBuilder.toString();
     }
 
     @Override

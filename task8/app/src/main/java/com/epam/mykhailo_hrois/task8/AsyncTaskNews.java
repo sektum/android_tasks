@@ -1,6 +1,5 @@
 package com.epam.mykhailo_hrois.task8;
 
-import android.content.Context;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
@@ -10,12 +9,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class AsyncTaskNews extends AsyncTask<Context, Void, Void> {
+public class AsyncTaskNews extends AsyncTask<Void, Void, Void> {
     private static final String API_KEY = "eefa8f5b92b24ff7993231986bfa9a96";
     String data = "";
 
     @Override
-    protected Void doInBackground(Context... voids) {
+    protected Void doInBackground(Void... voids) {
         try {
             URL url = new URL("https://newsapi.org/v2/top-headlines?country=ua&apiKey=" + API_KEY);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -26,6 +25,7 @@ public class AsyncTaskNews extends AsyncTask<Context, Void, Void> {
                 line = bufferedReader.readLine();
                 data = data + line;
             }
+            NewsService.data = this.data;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,8 +36,6 @@ public class AsyncTaskNews extends AsyncTask<Context, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-
-        NewsService.data = this.data;
     }
 
 }

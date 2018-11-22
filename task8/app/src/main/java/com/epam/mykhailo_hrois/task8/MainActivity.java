@@ -12,21 +12,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "JobService";
-    private static final int JOB_ID = 666;
+    private static final int JOB_ID = 123;
     private static final String MY_PREFS_NAME = "JsonData";
-    TextView textView;
+    private String newsJson;
+    TextView textView; //TODO RecycleView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.textView);
-        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-        String restoredText = prefs.getString("json", null);
-        if (restoredText != null) {
-            String text = prefs.getString("json", "No name defined");
-            textView.setText(text);
-        }
+        feelTextView();
     }
 
     public void scheduleJob(View v) {
@@ -45,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.d(TAG, "Job scheduling failed");
         }
+        feelTextView();
     }
 
     public void cancelJob(View v) {
@@ -56,5 +53,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+    }
+
+    private void feelTextView(){ //TODO RecycleView
+        SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        String restoredText = prefs.getString("json", null);
+        if (restoredText != null) {
+            newsJson = prefs.getString("json", "No name defined");
+            textView.setText(newsJson);
+        }
     }
 }
