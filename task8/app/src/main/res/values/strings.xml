@@ -3,4 +3,7 @@
     <string name="schedule_job">Schedule Job</string>
     <string name="cancel_job">Cancel Job</string>
     <string name="no_date">No Date</string>
+    <string name="channel_name">News</string>
+    <string name="channel_description">Updated news notification</string>
+    <string name="article">Article</string>
 </resources>
