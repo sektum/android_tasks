@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">task10</string>
+    <string name="add_note">Add Note</string>
+    <string name="insert_data">Please insert a title and description</string>
+    <string name="default_1">1</string>
+    <string name="default_title">Title</string>
+    <string name="default_description">Description</string>
 </resources>
