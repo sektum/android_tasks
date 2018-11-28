@@ -4,7 +4,9 @@ package com.epam.mykhailo_hrois.task10;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "note_table")
+import java.util.Objects;
+
+@Entity(tableName = "note")
 public class Note {
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -40,5 +42,22 @@ public class Note {
 
     public int getPriority() {
         return priority;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Note note = (Note) o;
+        return priority == note.priority &&
+                Objects.equals(title, note.title) &&
+                Objects.equals(description, note.description);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id);
     }
 }

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
 
 public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
     private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK = new DiffUtil.ItemCallback<Note>() {
@@ -20,9 +19,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
 
         @Override
         public boolean areContentsTheSame(@NonNull Note note, @NonNull Note t1) {
-            return note.getTitle().equals(t1.getTitle()) &&
-                    note.getDescription().equals(t1.getDescription()) &&
-                    note.getPriority() == t1.getPriority();
+            return note.equals(t1);
         }
     };
     private OnItemClickListener listener;
@@ -65,7 +62,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
         private TextView textViewDescription;
         private TextView textViewPriority;
 
-        public NoteHolder(@NonNull View itemView) {
+        NoteHolder(@NonNull View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.text_view_title);
             textViewDescription = itemView.findViewById(R.id.text_view_description);
