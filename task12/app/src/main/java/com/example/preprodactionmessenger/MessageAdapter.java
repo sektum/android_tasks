@@ -1,4 +1,4 @@
-package com.epam.mykhailo_hrois;
+package com.example.preprodactionmessenger;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -23,8 +23,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @NonNull
     @Override
     public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message, viewGroup, false);
-        return new MessageViewHolder(view);
+        return new MessageViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_message, viewGroup, false));
 
     }
 
@@ -35,7 +34,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 
     @Override
     public int getItemCount() {
-        return 0;
+        return messages.size();
     }
 
     class MessageViewHolder extends RecyclerView.ViewHolder {

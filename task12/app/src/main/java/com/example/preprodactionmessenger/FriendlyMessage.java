@@ -1,4 +1,4 @@
-package com.epam.mykhailo_hrois;
+package com.example.preprodactionmessenger;
 
 public class FriendlyMessage {
 
