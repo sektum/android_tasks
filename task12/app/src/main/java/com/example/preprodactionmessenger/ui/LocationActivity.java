@@ -55,7 +55,7 @@ public class LocationActivity extends AppCompatActivity {
         initializeLocationDatabaseReference();
 
         String mUserName = getIntent().getStringExtra(USERNAME);
-        GeoPoint mUserCoord = new GeoPoint(50.03669999d, 36.21899999d);
+        GeoPoint mUserCoord = new GeoPoint(50.03789999d, 36.22026999d);
         DatabaseReference mUserRef = locationDatabaseReference.child(mUserName);
         mUserRef.setValue(mUserCoord);
 
