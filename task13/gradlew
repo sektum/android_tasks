@@ -1,0 +1,103 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Copy" count="17" />
+      <entry action="$Cut" count="3" />
+      <entry action="$Delete" count="83" />
+      <entry action="$Paste" count="34" />
+      <entry action="$Redo" count="96" />
+      <entry action="$SelectAll" count="5" />
+      <entry action="$Undo" count="997" />
+      <entry action="Android.CreateResourceDirectory" count="2" />
+      <entry action="Android.CreateSampleDataDirectory" count="1" />
+      <entry action="Android.GenerateSignedApk" count="5" />
+      <entry action="Android.RunAndroidAvdManager" count="11" />
+      <entry action="Android.SyncProject" count="2" />
+      <entry action="AndroidConnectDebuggerAction" count="5" />
+      <entry action="AndroidMigrateToAndroidxAction" count="2" />
+      <entry action="CleanGradleProject" count="2" />
+      <entry action="CloseAllEditors" count="6" />
+      <entry action="CodeCompletion" count="101" />
+      <entry action="CommentByLineComment" count="12" />
+      <entry action="ContextHelp" count="1" />
+      <entry action="CopyPaths" count="1" />
+      <entry action="Debug" count="12" />
+      <entry action="Debugger.EditFrameSource" count="2" />
+      <entry action="DialogCancelAction Escape" count="1" />
+      <entry action="DialogOkAction Ctrl+Enter" count="12" />
+      <entry action="DialogOkAction Delete" count="1" />
+      <entry action="DialogOkAction Enter" count="41" />
+      <entry action="DialogOkAction Unknown keyCode_ 0x0" count="1" />
+      <entry action="EditSource" count="28" />
+      <entry action="EditorBackSpace" count="3129" />
+      <entry action="EditorChooseLookupItem" count="1480" />
+      <entry action="EditorChooseLookupItemReplace" count="8" />
+      <entry action="EditorCompleteStatement" count="18" />
+      <entry action="EditorCopy" count="149" />
+      <entry action="EditorCut" count="77" />
+      <entry action="EditorDelete" count="211" />
+      <entry action="EditorDeleteLine" count="24" />
+      <entry action="EditorDeleteToWordStart" count="1" />
+      <entry action="EditorDown" count="2497" />
+      <entry action="EditorDownWithSelection" count="1" />
+      <entry action="EditorDuplicate" count="66" />
+      <entry action="EditorEnter" count="684" />
+      <entry action="EditorEscape" count="12" />
+      <entry action="EditorIndentSelection" count="1" />
+      <entry action="EditorLeft" count="1895" />
+      <entry action="EditorLeftWithSelection" count="982" />
+      <entry action="EditorLineEnd" count="103" />
+      <entry action="EditorLineEndWithSelection" count="4" />
+      <entry action="EditorLineStart" count="28" />
+      <entry action="EditorLineStartWithSelection" count="57" />
+      <entry action="EditorNextWord" count="27" />
+      <entry action="EditorNextWordWithSelection" count="2" />
+      <entry action="EditorPaste" count="363" />
+      <entry action="EditorPreviousWord" count="63" />
+      <entry action="EditorPreviousWordWithSelection" count="3" />
+      <entry action="EditorRight" count="1786" />
+      <entry action="EditorRightWithSelection" count="477" />
+      <entry action="EditorSelectWord" count="44" />
+      <entry action="EditorSplitLine" count="10" />
+      <entry action="EditorStartNewLine" count="3" />
+      <entry action="EditorTab" count="19" />
+      <entry action="EditorTextStart" count="1" />
+      <entry action="EditorUp" count="679" />
+      <entry action="EditorUpWithSelection" count="15" />
+      <entry action="EvaluateExpression" count="2" />
+      <entry action="ExpandLiveTemplateByTab" count="2" />
+      <entry action="Find" count="8" />
+      <entry action="FindPrevious" count="8" />
+      <entry action="FindUsages" count="3" />
+      <entry action="Generate" count="18" />
+      <entry action="GotoDeclaration" count="96" />
+      <entry action="Gradle.ExecuteTask" count="2" />
+      <entry action="HideAllWindows" count="8" />
+      <entry action="IntroduceVariable" count="1" />
+      <entry action="InvalidateCaches" count="2" />
+      <entry action="MakeGradleProject" count="11" />
+      <entry action="MoveStatementDown" count="1" />
+      <entry action="MoveStatementUp" count="2" />
+      <entry action="NewAndroidImageAsset" count="13" />
+      <entry action="NewClass" count="13" />
+      <entry action="NewDir" count="14" />
+      <entry action="NewFile" count="1" />
+      <entry action="NewModuleInGroup" count="2" />
+      <entry action="NewProject" count="7" />
+      <entry action="NextTab" count="2" />
+      <entry action="NextTemplateVariable" count="30" />
+      <entry action="OpenFile" count="23" />
+      <entry action="OpenModuleSettings" count="2" />
+      <entry action="OverrideMethods" count="1" />
+      <entry action="ParameterInfo" count="12" />
+      <entry action="Progress Resumed" count="1" />
+      <entry action="QuickJavaDoc" count="11" />
+      <entry action="RebuildGradleProject" count="3" />
+      <entry action="ReformatCode" count="98" />
+      <entry action="RenameElement" count="42" />
+      <entry action="Resume" count="39" />
+      <entry action="Run" count="277" />
+      <entry action="SafeDelete" count="1" />
+      <entry action="SaveAll" count="15" />
+      <entry action="ShowBookmarks" count="1" />
+      <entry action="ShowIntentionAct
