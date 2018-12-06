@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Friendly Chat</string>
+    <string name="app_name">Preprodaction Messenger</string>
     <string name="sign_out">Sign Out</string>
+    <string name="location">location</string>
     <string name="send_button_label">Send</string>
+    <string name="sign_in">You\'re now signed in. Welcome to PreproductionMessenger.</string>
+    <string name="canceled_sign_in">Sign in cancelled</string>
+    <string name="photo_picker_title">Complete action using</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="agent">Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.preprodactionmessenger;
+package com.example.preprodactionmessenger.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+import com.example.preprodactionmessenger.model.FriendlyMessage;
+import com.example.preprodactionmessenger.R;
 
 import java.util.List;
 
@@ -54,7 +56,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             if (isPhoto) {
                 messageTextView.setVisibility(View.GONE);
                 photoImageView.setVisibility(View.VISIBLE);
-                Picasso.with(photoImageView.getContext())
+                Glide.with(photoImageView.getContext())
                         .load(message.getPhotoUrl())
                         .into(photoImageView);
             } else {

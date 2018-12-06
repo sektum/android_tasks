@@ -1,4 +1,4 @@
-package com.example.preprodactionmessenger;
+package com.example.preprodactionmessenger.model;
 
 public class FriendlyMessage {
 
