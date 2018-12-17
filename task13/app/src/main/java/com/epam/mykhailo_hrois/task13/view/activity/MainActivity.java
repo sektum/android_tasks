@@ -1,7 +1,9 @@
-package com.epam.mykhailo_hrois.task13;
+package com.epam.mykhailo_hrois.task13.view.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.epam.mykhailo_hrois.task13.R;
 
 public class MainActivity extends AppCompatActivity {
 
