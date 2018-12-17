@@ -9,7 +9,8 @@ import java.util.List;
 
 public class ExchangeRatesMapper {
 
-    public ExchangeRatesMapper() {}
+    public ExchangeRatesMapper() {
+    }
 
     public Rates transform(ExchangeRates rates) {
         Rates rate = null;
@@ -22,10 +23,10 @@ public class ExchangeRatesMapper {
         return rate;
     }
 
-    public List<Rates> transform(Collection<ExchangeRates> userEntityCollection) {
-        final List<Rates> ratesList = new ArrayList<>(20);
-        for (ExchangeRates userEntity : userEntityCollection) {
-            final Rates rate = transform(userEntity);
+    public List<Rates> transform(Collection<ExchangeRates> exchangeRatesCollection) {
+        List<Rates> ratesList = new ArrayList<>();
+        for (ExchangeRates exchangeRates : exchangeRatesCollection) {
+            Rates rate = transform(exchangeRates);
             if (rate != null) {
                 ratesList.add(rate);
             }

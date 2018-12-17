@@ -1,7 +1,5 @@
 package com.epam.mykhailo_hrois.lib.domain;
 
-import com.sun.corba.se.spi.orb.StringPair;
-
 public class Rates {
     private final int id;
 
@@ -36,5 +34,9 @@ public class Rates {
 
     public void setChangeCourse(Double changeCourse) {
         this.changeCourse = changeCourse;
+    }
+
+    public int getId() {
+        return id;
     }
 }

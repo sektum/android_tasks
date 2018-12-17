@@ -11,8 +11,8 @@ import java.util.List;
 
 public class ExchangeRatesRepository implements RatesRepository {
 
-    private final ExchangeRatesMapper exchangeRatesMapper;
-    private final ExchangeRatesDataStore exchangeRatesDataStore;
+    private ExchangeRatesMapper exchangeRatesMapper;
+    private ExchangeRatesDataStore exchangeRatesDataStore;
 
     public ExchangeRatesRepository() {
         exchangeRatesMapper = new ExchangeRatesMapper();

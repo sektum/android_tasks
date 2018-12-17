@@ -1,6 +1,7 @@
 package com.epam.mykhailo_hrois.lib.data.entity;
 
-import com.sun.corba.se.spi.orb.StringPair;
+
+import com.epam.mykhailo_hrois.lib.domain.StringPair;
 
 public class ExchangeRates {
     private int id;
@@ -8,7 +9,7 @@ public class ExchangeRates {
     private Double currentCourse;
     private Double changeCourse;
 
-    public ExchangeRates(){
+    public ExchangeRates() {
 
     }
 

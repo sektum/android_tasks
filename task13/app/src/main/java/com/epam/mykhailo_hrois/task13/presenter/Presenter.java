@@ -1,4 +1,6 @@
 package com.epam.mykhailo_hrois.task13.presenter;
 
-public class Presenter {
+public interface Presenter {
+
+    void textEdited(String first, String second);
 }
