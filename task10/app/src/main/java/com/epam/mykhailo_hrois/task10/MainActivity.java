@@ -19,34 +19,13 @@ import android.widget.Toast;
 import java.util.List;
 
 
+/**
+ * Activity that holds all data processing
+ * and also holds a main page view
+ */
 public class MainActivity extends AppCompatActivity {
     public static final int ADD_NOTE_REQUEST = 1;
     public static final int EDIT_NOTE_REQUEST = 2;
-
-    private static class SwipeListener extends ItemTouchHelper.SimpleCallback {
-        private NoteViewModel noteViewModel;
-        private NoteAdapter noteAdapter;
-        private Context context;
-
-        public SwipeListener(NoteViewModel noteViewModel, NoteAdapter noteAdapter, Context context) {
-            super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
-            this.noteViewModel = noteViewModel;
-            this.noteAdapter = noteAdapter;
-            this.context = context;
-        }
-
-        @Override
-        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
-            return false;
-        }
-
-        @Override
-        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-            noteViewModel.delete(noteAdapter.getNoteAt(viewHolder.getAdapterPosition()));
-            Toast.makeText(context, R.string.note_deleted, Toast.LENGTH_SHORT).show();
-        }
-    }
-
     private NoteViewModel noteViewModel;
     private NoteAdapter noteAdapter;
 
@@ -72,10 +51,20 @@ public class MainActivity extends AppCompatActivity {
         noteAdapter.setOnItemClickListener(this::editItem);
     }
 
+    /**
+     * @param notes
+     *
+     * Refreshes Recycler view by notifying adapter
+     */
     private void onDataLoaded(List<Note> notes) {
         noteAdapter.submitList(notes);
     }
 
+    /**
+     * @param note
+     *
+     * Edit behavior for a note
+     */
     private void editItem(Note note) {
         Intent intent = new Intent(this, AddEditNoteActivity.class);
         intent.putExtra(AddEditNoteActivity.EXTRA_ID, note.getId());
@@ -85,11 +74,21 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, EDIT_NOTE_REQUEST);
     }
 
+    /**
+     * @param view
+     *
+     * Add behavior for a note
+     */
     private void addNote(View view) {
         Intent intent = new Intent(this, AddEditNoteActivity.class);
         startActivityForResult(intent, ADD_NOTE_REQUEST);
     }
 
+    /**
+     * @param requestCode from {@link AddEditNoteActivity} to find out the behavior
+     * @param resultCode from {@link AddEditNoteActivity} to find out that all went well
+     * @param data which holds a note
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -103,10 +102,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @param data holds a note from {@link AddEditNoteActivity}
+     *
+     * Returns when there is no data
+     * Calls on edit note's behavior and updates a note
+     */
     private void saveEditedNote(Intent data) {
         int id = data.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1);
 
-        if(id == -1){
+        if (id == -1) {
             Toast.makeText(this, R.string.note_cant_be_updated, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -120,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.note_updated, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * @param data holds a note from {@link AddEditNoteActivity}
+     *
+     * Returns when there is no data
+     * Calls on add note's behavior and inserts a note
+     */
     private void addNoteToDb(Intent data) {
         String title = data.getStringExtra(AddEditNoteActivity.EXTRA_TITLE);
         String description = data.getStringExtra(AddEditNoteActivity.EXTRA_DESCRIPTION);
@@ -146,6 +157,33 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.all_notes_deleted, Toast.LENGTH_SHORT).show();
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /**
+     * Swipe callback for deleting note by swiping over the view
+     */
+    private static class SwipeListener extends ItemTouchHelper.SimpleCallback {
+        private NoteViewModel noteViewModel;
+        private NoteAdapter noteAdapter;
+        private Context context;
+
+        public SwipeListener(NoteViewModel noteViewModel, NoteAdapter noteAdapter, Context context) {
+            super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
+            this.noteViewModel = noteViewModel;
+            this.noteAdapter = noteAdapter;
+            this.context = context;
+        }
+
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+            noteViewModel.delete(noteAdapter.getNoteAt(viewHolder.getAdapterPosition()));
+            Toast.makeText(context, R.string.note_deleted, Toast.LENGTH_SHORT).show();
         }
     }
 }

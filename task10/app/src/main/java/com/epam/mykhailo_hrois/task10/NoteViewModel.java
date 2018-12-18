@@ -1,7 +1,6 @@
 package com.epam.mykhailo_hrois.task10;
 
 import android.app.Application;
-
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
@@ -18,19 +17,19 @@ public class NoteViewModel extends AndroidViewModel {
         allNotes = repository.getAllNotes();
     }
 
-    public void insert(Note note){
+    public void insert(Note note) {
         repository.insert(note);
     }
 
-    public void update(Note note){
+    public void update(Note note) {
         repository.update(note);
     }
 
-    public void delete(Note note){
+    public void delete(Note note) {
         repository.delete(note);
     }
 
-    public void deleteAllNotes(){
+    public void deleteAllNotes() {
         repository.deleteAllNotes();
     }
 

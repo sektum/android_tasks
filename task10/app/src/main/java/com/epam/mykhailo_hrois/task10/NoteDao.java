@@ -11,6 +11,9 @@ import android.arch.persistence.room.Update;
 import java.util.List;
 
 
+/**
+ * Interface that represents DAO object
+ */
 @Dao
 public interface NoteDao {
 

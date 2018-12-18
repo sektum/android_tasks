@@ -6,6 +6,9 @@ import android.arch.persistence.room.PrimaryKey;
 
 import java.util.Objects;
 
+/**
+ * The entity used as description of a table
+ */
 @Entity(tableName = "note")
 public class Note {
     @PrimaryKey(autoGenerate = true)
