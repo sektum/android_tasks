@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CDPTasks</string>
+    <string name="app_name">Epam</string>
+    <string name="applicationId">com.epam</string>
 </resources>

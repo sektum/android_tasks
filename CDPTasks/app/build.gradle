@@ -5,10 +5,25 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        epam {
+            storeFile file('../task1_key.jks')
+            storePassword 'drowssap'
+            keyPassword 'drowssap'
+            keyAlias = 'cdpKey'
+        }
+
+        rdlab {
+            storeFile file('../task1_key_rdlab.jks')
+            storePassword 'drowssaprdlab'
+            keyPassword 'drowssaprdlab'
+            keyAlias = 'rdlab'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.epam.cdptasks"
-        minSdkVersion 28
+        applicationId "com.epam"
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -16,8 +31,29 @@ android {
     }
     buildTypes {
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+
+        debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+
+            applicationIdSuffix ".debug"
+        }
+    }
+    flavorDimensions 'task1'
+    productFlavors {
+        epam {
+            dimension = 'task1'
+            signingConfig signingConfigs.epam
+        }
+        rdlab {
+            dimension = 'task1'
+            versionNameSuffix "-RDLab"
+            signingConfig signingConfigs.rdlab
         }
     }
 }
