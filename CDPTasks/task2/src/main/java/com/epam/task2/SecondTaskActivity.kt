@@ -1,14 +1,14 @@
-package com.epam.cdptasks
+package com.epam.task2
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.epam.cdptasks.R
+import com.epam.task2.ui.SectionsPagerAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
-import androidx.appcompat.app.AppCompatActivity
-import android.view.View
-import com.epam.cdptasks.ui.main.SectionsPagerAdapter
 
 class SecondTaskActivity : AppCompatActivity() {
 
@@ -16,7 +16,7 @@ class SecondTaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_task)
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
-        val viewPager: androidx.viewpager.widget.ViewPager = findViewById(R.id.view_pager)
+        val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
@@ -25,7 +25,7 @@ class SecondTaskActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, resources.getText(R.string.snackbar_text), Snackbar.LENGTH_LONG)
                 .setAction(resources.getText(R.string.snackbar_button_text)) {
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, MainActivityTask2::class.java)
                     startActivity(intent)
                 }.show()
         }

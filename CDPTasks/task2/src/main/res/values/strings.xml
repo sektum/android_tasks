@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CDPTasks</string>
+    <string name="tab_text_1">Cool tab</string>
+    <string name="tab_text_2">Not cool tab</string>
+    <string name="tab_text_3">The best tab</string>
+    <string name="label_activity_second_task">Second Task</string>
+    <string name="title_activity_second_task">Second Title</string>
+    <string name="snackbar_text">Sup. Tap to navigate to Main screen</string>
+    <string name="snackbar_button_text">To Main</string>
+    <string name="first_page_greeting">Hello elysium from section: %d</string>
+    <string name="second_page_greeting">Hi hell from section: %d</string>
+    <string name="third_page_greeting">Hello world from section: %d</string>
+</resources>
+

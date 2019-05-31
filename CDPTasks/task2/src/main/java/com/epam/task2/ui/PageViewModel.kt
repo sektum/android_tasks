@@ -1,4 +1,4 @@
-package com.epam.cdptasks.ui.main
+package com.epam.task2.ui
 
 import android.content.res.Resources
 import androidx.lifecycle.LiveData

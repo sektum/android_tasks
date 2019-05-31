@@ -1,4 +1,4 @@
-package com.epam.cdptasks.ui.main
+package com.epam.task2.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,7 +17,7 @@ class PlaceholderFragment : androidx.fragment.app.Fragment() {
         super.onCreate(savedInstanceState)
         pageViewModel = ViewModelProviders.of(this).get(PageViewModel::class.java).apply {
             setResources(this@PlaceholderFragment.resources)
-            setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
+            setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: DEFAULT_INDEX)
         }
     }
 
@@ -27,7 +27,7 @@ class PlaceholderFragment : androidx.fragment.app.Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_second_task, container, false)
         val textView: TextView = root.findViewById(R.id.section_label)
-        pageViewModel.text.observe(this, Observer<String> {
+        pageViewModel.text.observe(viewLifecycleOwner, Observer<String> {
             textView.text = it
         })
         return root
@@ -35,6 +35,7 @@ class PlaceholderFragment : androidx.fragment.app.Fragment() {
 
     companion object {
         private const val ARG_SECTION_NUMBER = "section_number"
+        private const val DEFAULT_INDEX = 1
 
         fun newInstance(sectionNumber: Int): PlaceholderFragment {
             return PlaceholderFragment().apply {

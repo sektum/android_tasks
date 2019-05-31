@@ -1,9 +1,9 @@
-package com.epam.cdptasks
-
-import android.support.v7.app.AppCompatActivity
+package com.epam.task2
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.epam.cdptasks.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivityTask2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
