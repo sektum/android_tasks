@@ -1,6 +1,5 @@
 package com.epam.task2.ui
 
-import android.content.res.Resources
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -10,9 +9,9 @@ import com.epam.cdptasks.R
 class PageViewModel : ViewModel() {
 
     private val index = MutableLiveData<Int>()
-    private lateinit var resources: Resources
+    private lateinit var resources: ResourceWrapper
     val text: LiveData<String> = Transformations.map(index) {
-        when(index.value) {
+        when (index.value) {
             1 -> resources.getString(R.string.first_page_greeting, it)
             2 -> resources.getString(R.string.second_page_greeting, it)
             else -> resources.getString(R.string.third_page_greeting, it)
@@ -23,7 +22,7 @@ class PageViewModel : ViewModel() {
         this.index.value = index
     }
 
-    fun setResources(resources: Resources) {
+    fun setResources(resources: ResourceWrapper) {
         this.resources = resources
     }
 }

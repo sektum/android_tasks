@@ -16,7 +16,13 @@ class PlaceholderFragment : androidx.fragment.app.Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         pageViewModel = ViewModelProviders.of(this).get(PageViewModel::class.java).apply {
-            setResources(this@PlaceholderFragment.resources)
+            setResources(object : ResourceWrapper{
+                override fun getString(id: Int): String =
+                    resources.getString(id)
+
+                override fun getString(id: Int, vararg params: Any): String =
+                        resources.getString(id, *params)
+            })
             setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: DEFAULT_INDEX)
         }
     }
