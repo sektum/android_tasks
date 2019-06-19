@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">task6</string>
+
+    <string name="car_number_of_doors">Doors number:</string>
+    <string name="electrocar_distance">Distance to cover:</string>
+    <string name="crossover_clearance">Clearance:</string>
+</resources>
