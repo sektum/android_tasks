@@ -9,6 +9,15 @@ import com.epam.task6.R
 import com.epam.task6.models.Car
 
 class CarDelegate(viewType: Int) : BaseDelegate<Car, CarDelegate.CarViewHolder>(viewType) {
+    override fun onBindViewHolder(
+        items: List<Car>,
+        position: Int,
+        holder: CarViewHolder,
+        payloads: MutableList<Any>
+    ) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun onBindViewHolder(items: List<Car>, position: Int, holder: CarViewHolder) {
         holder.onBind(items[position])
     }

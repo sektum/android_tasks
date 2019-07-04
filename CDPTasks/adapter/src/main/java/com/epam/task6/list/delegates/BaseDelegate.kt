@@ -8,4 +8,6 @@ abstract class BaseDelegate<M : Vehicle, VH : BaseViewHolder<M>>(val type: Int) 
     abstract fun onCreateViewHolder(parent: ViewGroup, items: List<M>): VH
 
     abstract fun onBindViewHolder(items: List<M>, position: Int, holder: VH)
+
+    abstract fun onBindViewHolder(items: List<M>, position: Int, holder: VH, payloads: MutableList<Any>)
 }

@@ -21,14 +21,17 @@ class MainActivity : AppCompatActivity() {
         Car("Ferrari California", 1995, "Four-wheel drive", 2),
         Motorcycle("Yamaha", 2019, "Sport")
     )
+    private lateinit var viewAdapter: VehiclesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        viewAdapter = VehiclesAdapter()
+        viewAdapter.updateList(carsList)
         recycler_view.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             // set the custom adapter to the RecyclerView
-            adapter = VehiclesAdapter(carsList)
+            adapter = viewAdapter
         }.also {
             it.addItemDecoration(DividerItemDecoration(it.context, VERTICAL))
         }

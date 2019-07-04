@@ -10,6 +10,15 @@ import com.epam.task6.models.Electrocar
 
 class ElectrocarDelegate(viewType: Int) :
     BaseDelegate<Electrocar, ElectrocarDelegate.ElectrocarViewHolder>(viewType) {
+    override fun onBindViewHolder(
+        items: List<Electrocar>,
+        position: Int,
+        holder: ElectrocarViewHolder,
+        payloads: MutableList<Any>
+    ) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun onBindViewHolder(items: List<Electrocar>, position: Int, holder: ElectrocarViewHolder) {
         holder.onBind(items[position])
     }
